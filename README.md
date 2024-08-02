@@ -1,5 +1,5 @@
 # Test Automation Project with Selenium Java and Gradle
-## This is a suite of Test Cases for Medical Appointments on https://katalon-demo-cura.herokuapp.com/
+### This is a suite of Test Cases for Medical Appointments on https://katalon-demo-cura.herokuapp.com/
 
 
 ```gherkin
