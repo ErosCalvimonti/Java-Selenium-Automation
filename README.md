@@ -1,67 +1,97 @@
-# Test Automation Project
+# Test Automation Project with Selenium Java and Gradle
 
-This project implements automated testing for the CURA Healthcare Services web application using Selenium WebDriver with Java and the Cucumber framework for BDD (Behavior-Driven Development).
+_Open source test automation framework for web applications with Selenium, Cucumber, and Gradle_
 
-## Tools Implemented
+## Indices
+
+In this README, we will cover the following topics:
+
+- What can we do with this Framework
+- Technologies Implemented (Technological Stack)
+- Project Structure
+- Steps to Run the Framework
+- How to manage test tags
+- How to view test reports
+
+## What can we do with this Framework
+
+- Automate testing for web applications using Selenium WebDriver
+- Implement BDD using the Gherkin language with Cucumber
+- Generate detailed reports after test execution
+- Use Gradle for build automation and dependency management
+- Simplify test management with automatic browser driver handling using WebDriverManager
+- Execute tests in a flexible manner with options for specific tags, exclusion, and multiple tags
+
+## Technological Stack
+
+This project includes the following technologies:
 
 - **Java**: Main programming language.
-- Selenium WebDriver**: For web browser automation.
-- Cucumber**: Framework for implementing tests in BDD format.
-- JUnit**: Unit testing framework for Java.
-- Gradle**: Build automation system.
-- WebDriverManager**: For automatic management of browser drivers.
+- **Selenium WebDriver**: For web browser automation.
+- **Cucumber**: Tool for implementing tests in BDD format using Gherkin.
+- **JUnit**: Unit testing framework for Java.
+- **Gradle**: Build automation system.
+- **WebDriverManager**: For automatic management of browser drivers.
 
 ## Project Structure
 
-- `src/test/java/pages`: Contains the `BasePage` class with common methods to interact with web elements.
-- `src/test/java/runner`: Contains the `TestRunner` class to run Cucumber tests.
-- `src/test/resources`: Contains the Cucumber feature files with the test scenarios.
+This framework is organized using the Page Object Model (POM) pattern and has the following structure:
 
-## How to use
+```
+└── src
+├── test
+│ ├── java
+│ │ ├── pages -----------------------> Contains the BasePage class with methods to interact with web elements
+│ │ ├── runner ----------------------> Contains the TestRunner class for running Cucumber tests
+│ └── resources
+│ └── features --------------------> Contains Cucumber feature files with test scenarios
+└── build.gradle ----------------------------> Gradle build configuration file
 
-1. **Project Setup**:
-   - Make sure you have Java JDK installed.
-   - Configure the project dependencies in the `build.gradle` file.
-
-2. **Run the Tests**:
-   - To run all tests:
-     ```
-     gradle test
-     ```
-   - To run tests with specific tags:
-     ```
-     gradle test -Dcucumber.filter.tags="@Login"
-     ```
-   - To exclude tests with a specific tag:
-     ```
-     gradle test -Dcucumber.filter.tags="not @Login"
-     ```
-   - To run multiple tags:
-     ```
-     gradle test -Dcucumber.filter.tags="@Login or @OtroTag"
-     ```
-
-3. **View Results**:
-   - Cucumber reports will be generated in the `target/cucumber-reports` directory.
-
-## Important Notes
-
-- The `BasePage` class provides useful methods for interacting with web elements, such as navigating to a URL, finding elements, clicking, typing text, and selecting options from a dropdown.
-- The `WebDriverManager` is used to automatically configure the ChromeDriver.
-- The tests use Chrome as the default browser.
-- Make sure you have an active Internet connection so that WebDriverManager can download the necessary driver.
-
-## Example Scenario
-
-```gherkin
-Feature: Test Functionality of CURA Healthcare Services to login as user.
-
-    @Login
-    Scenario: User can login in the page of user .
-        Given I navigate to katalon-demo-cura.herokuapp.com
-        When I go to login page
-        And I enter valid credentials
-        Then I can see my account page
 ```
 
-This scenario tests the login functionality in the CURA Healthcare Services application.
+## Steps to Run the Framework
+
+### Prerequisites
+
+- Java JDK installed
+- Gradle configured in your environment
+
+### Project Setup
+
+1. **Clone the repository**:
+   - Open a terminal on your local machine.
+   - Clone the repository from GitHub using the following command:
+
+     ````bash
+     git clone https://github.com/your-username/your-repository.git
+     ```
+     Replace `your-username` and `your-repository` with your GitHub username and repository name respectively.
+
+2. **Navigate to the project directory**:
+   - After cloning the repository, navigate to the project directory using the `cd` command:
+
+     ````bash
+     cd your-repository
+     ```
+     Again, replace `your-repository` with the name of the cloned project directory.
+
+3. **Install dependencies**:
+   - Before you can run the project, you need to install all the project dependencies. Make sure that Gradle is installed on your system.
+   - Once inside the project directory, run the following command to clean up any previous builds and download the necessary dependencies:
+
+     ````bash
+     gradle clean build
+     ```
+
+     This command does the following:
+     - **`clean`**: Removes all files generated during previous builds, ensuring that the next build starts from scratch.
+     - **`build`**: Compiles the project source code, runs the unit tests, and assembles a JAR file of the project, all in one step. This also downloads and installs all dependencies listed in the `build.gradle` file.
+
+4. **Verify the setup**:
+   - After the `gradle clean build` command completes, verify that there are no errors in the terminal. If the setup is correct, you should see a message indicating that the build was successful.
+   - You are now ready to start running tests or continue with project development.
+
+## 🔗 About me
+[![GitHub Repos](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/ErosCalvimonti)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/eroscalvimonti/)
+
