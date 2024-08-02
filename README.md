@@ -2,7 +2,11 @@
 ## This is a suite of Test Cases for Medical Appointments on https://katalon-demo-cura.herokuapp.com/
 
 ### Home 
-https://pasteboard.co/yACggXTIFrsb.png
+! [Home] (!(<Screenshot 2024-08-01 at 7.38.20 PM.png>))
+
+### Make Appointment
+
+! [MakeAppointment] (!(<Screenshot 2024-08-02 at 10.47.36 AM.png>))
 
 
 ### Make Appointment
