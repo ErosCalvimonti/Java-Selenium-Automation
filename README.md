@@ -16,7 +16,7 @@ Feature: Test Functionality of CURA Healthcare Services to login as user.
   ```gherkin
 Feature: Test Functionality of CURA Healthcare Services for make an appointment.
 
-    Background: Once the user is logged in
+    Background: User is logged in
         Given I navigate to katalon-demo-cura.herokuapp.com
         When I go to login page
         And I enter valid credentials
@@ -28,13 +28,14 @@ Feature: Test Functionality of CURA Healthcare Services for make an appointment.
         And I click on the Book Apointment button
         Then I can see the confirmation of my appointment
 
+
   ```
 
 
 
 _Open source test automation framework for web applications with Selenium, Cucumber, and Gradle_
 
-## Indices
+### Indices
 
 In this README, we will cover the following topics:
 
@@ -45,7 +46,7 @@ In this README, we will cover the following topics:
 - How to manage test tags
 - How to view test reports
 
-## What can we do with this Framework
+### What can we do with this Framework
 
 - Automate testing for web applications using Selenium WebDriver
 - Implement BDD using the Gherkin language with Cucumber
@@ -54,7 +55,7 @@ In this README, we will cover the following topics:
 - Simplify test management with automatic browser driver handling using WebDriverManager
 - Execute tests in a flexible manner with options for specific tags, exclusion, and multiple tags
 
-## Technological Stack
+### Technological Stack
 
 This project includes the following technologies:
 
@@ -65,7 +66,7 @@ This project includes the following technologies:
 - **Gradle**: Build automation system.
 - **WebDriverManager**: For automatic management of browser drivers.
 
-## Project Structure
+### Project Structure
 
 This framework is organized using the Page Object Model (POM) pattern and has the following structure:
 
@@ -81,8 +82,20 @@ This framework is organized using the Page Object Model (POM) pattern and has th
 
 ```
 
-## Steps to Run the Framework
+### Steps to Run the Framework
 
+
+To run and filter by Tag, depending on which Step we want to run in the feature file:
+```
+gradle test -Dcucumber.filter.tags="@NameTag"
+
+```
+
+Also to skip a test we can use the following command:
+```
+ gradle test -Dcucumber.filter.tags="not @NameTag"
+
+```
 ### Prerequisites
 
 - Java JDK installed
@@ -97,7 +110,6 @@ This framework is organized using the Page Object Model (POM) pattern and has th
      ````bash
      git clone https://github.com/your-username/your-repository.git
      ```
-     Replace `your-username` and `your-repository` with your GitHub username and repository name respectively.
 
 2. **Navigate to the project directory**:
    - After cloning the repository, navigate to the project directory using the `cd` command:
@@ -123,7 +135,7 @@ This framework is organized using the Page Object Model (POM) pattern and has th
    - After the `gradle clean build` command completes, verify that there are no errors in the terminal. If the setup is correct, you should see a message indicating that the build was successful.
    - You are now ready to start running tests or continue with project development.
 
-## 🔗 About me
+### 🔗 About me
 [![GitHub Repos](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/ErosCalvimonti)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/eroscalvimonti/)
 
