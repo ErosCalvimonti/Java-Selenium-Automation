@@ -1,7 +1,6 @@
 package pages;
 
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 
 public class AppointmentPage extends BasePage {
 
@@ -14,7 +13,8 @@ public class AppointmentPage extends BasePage {
     private final String textForComment = "//textarea[@id=\'txt_comment\']";
     private final String commentForGiveThanks = "Thanks for giving me an appointment";
     private final String btnMakeAppointment = "//button[@id='btn-book-appointment']";
-    private final String messageConfirmation = "//h2[normalize-space()='Appointment Confirmation']";
+    private final String messageConfirmation = "//h2[contains(text(),'Appointment Confirmation')]";
+    
 
     public AppointmentPage() {
         super(driver);
@@ -35,9 +35,8 @@ public class AppointmentPage extends BasePage {
         clickElement(btnMakeAppointment);
     }
 
-    public void assertTheConfirmation() {
-        WebElement confirmation = Find(messageConfirmation);
-        Assert.assertTrue(confirmation.isDisplayed(), "Appointment Confirmation");
+    public WebElement getConfirmationMessage() {
+        return Find(messageConfirmation);
     }
 
 }

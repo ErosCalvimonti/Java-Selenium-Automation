@@ -1,5 +1,7 @@
 package steps;
 
+import org.testng.Assert;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -31,7 +33,7 @@ public class AppointmentSteps extends BasePage {
 
     @Then("I can see the confirmation of my appointment")
     public void seeConfirmation() {
-        appointment.assertTheConfirmation();
+        Assert.assertTrue(appointment.getConfirmationMessage().isDisplayed(), "Appointment Confirmation");
     }
 
 }
