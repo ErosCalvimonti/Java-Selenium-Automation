@@ -1,17 +1,6 @@
 # Test Automation Project with Selenium Java and Gradle
 ## This is a suite of Test Cases for Medical Appointments on https://katalon-demo-cura.herokuapp.com/
 
-### Home 
-! [Home] (!(<Screenshot 2024-08-01 at 7.38.20 PM.png>))
-
-### Make Appointment
-
-! [MakeAppointment] (!(<Screenshot 2024-08-02 at 10.47.36 AM.png>))
-
-
-### Make Appointment
-https://pasteboard.co/BT57l9MtYynB.png
-
 
 ```gherkin
 Feature: Test Functionality of CURA Healthcare Services to login as user.
