@@ -1,4 +1,43 @@
 # Test Automation Project with Selenium Java and Gradle
+## This is a suite of Test Cases for Medical Appointments on https://katalon-demo-cura.herokuapp.com/
+
+### Home 
+https://pasteboard.co/yACggXTIFrsb.png
+
+
+### Make Appointment
+https://pasteboard.co/BT57l9MtYynB.png
+
+
+```gherkin
+Feature: Test Functionality of CURA Healthcare Services to login as user.
+
+    @Login
+    Scenario: User can login in the page of user .
+        Given I navigate to katalon-demo-cura.herokuapp.com
+        When I go to login page
+        And I enter valid credentials
+        Then I can see my account page
+  ```
+
+  ```gherkin
+Feature: Test Functionality of CURA Healthcare Services for make an appointment.
+
+    Background: Once the user is logged in
+        Given I navigate to katalon-demo-cura.herokuapp.com
+        When I go to login page
+        And I enter valid credentials
+
+    @MakeAppointment
+    Scenario: User logged in is able to make an appointment
+        When I click on Make Appointment button
+        And I fill the form of appointment
+        And I click on the Book Apointment button
+        Then I can see the confirmation of my appointment
+
+  ```
+
+
 
 _Open source test automation framework for web applications with Selenium, Cucumber, and Gradle_
 

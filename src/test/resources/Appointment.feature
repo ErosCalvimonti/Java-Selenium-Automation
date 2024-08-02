@@ -1,6 +1,6 @@
-Feature: Test Functionality of CURA Healthcare Services for the make an appointment.
+Feature: Test Functionality of CURA Healthcare Services for make an appointment.
 
-    Background: Once the user is logged in
+    Background: User is logged in
         Given I navigate to katalon-demo-cura.herokuapp.com
         When I go to login page
         And I enter valid credentials
