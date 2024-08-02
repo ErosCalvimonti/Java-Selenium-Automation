@@ -5,10 +5,10 @@ import org.testng.Assert;
 
 public class AppointmentPage extends BasePage {
 
-    private final String selectLocator = "///select[@id=\'combo_facility\']";
+    private final String selectLocator = "//select[@id=\'combo_facility\']";
     private final String programSelected = "//input[@id=\'radio_program_medicaid\']";
-    private final String valueSelected = "Seoul CURA Healthcare Center";
-    private final String selectDate = "//span[@class='glyphicon glyphicon-calendar']";
+    private final String textSelected = "Seoul CURA Healthcare Center";
+    private final String selectDate = "//input[@id=\'txt_visit_date\']";
     private final String dateOfAppointment = "22/09/2026";
     private final String makeAppointmentBtn = "//a[@id='btn-make-appointment']";
     private final String textForComment = "//textarea[@id=\'txt_comment\']";
@@ -25,7 +25,7 @@ public class AppointmentPage extends BasePage {
     }
 
     public void fillTheForm() {
-        selectFromDropdownnByValue(selectLocator, valueSelected);
+        selectFromDropdownnByText(selectLocator, textSelected);
         clickElement(programSelected);
         write(selectDate, dateOfAppointment);
         write(textForComment, commentForGiveThanks);

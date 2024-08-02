@@ -48,9 +48,9 @@ public class BasePage {
         Find(locator).sendKeys(keysToSend);
     }
 
-    public void selectFromDropdownnByValue(String locator, String value) {
+    public void selectFromDropdownnByText(String locator, String text) {
         Select dropdown = new Select(Find(locator));
 
-        dropdown.selectByValue(value);
+        dropdown.selectByVisibleText(text);
     }
 }
